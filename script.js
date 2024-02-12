@@ -9,3 +9,20 @@ gsap.fromTo(gradient,
   {ease: "none", duration: 6, background: b2, repeat: -1, yoyo: true}
 );
 
+const timeline = gsap.timeline({ defaults: { duration: 1 }});
+
+timeline
+  .from('.top', { y: '-100%', ease: "sine.in" })
+  .from('.bottom', { y: '100%', ease: "sine.in" }, '<0')
+  .from('.link', { opacity: 0, stagger: 0.5 })
+  .from('.right', { x: '-100vw', ease: 'power2.in'}, 1)
+  .from('.left', { x: '-100%' }, '<.5')
+  .from('.grad', { opacity: 0 }, 2)
+  .fromTo('.button', { opacity: 0 }, { duration: 0.5, opacity: 1, ease: "power1.in"}, '<.5')
+
+  const button = document.querySelector('.button');
+
+  button.addEventListener('click', () => {
+    timeline.timeScale(2)
+    timeline.reverse()
+  })
