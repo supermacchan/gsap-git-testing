@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Testing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="top bg-purple-800 text-white py-5 px-10 flex justify-around">
+          <a href="/" class="link uppercase font-semibold">Link One</a>
+          <a href="/" class="link uppercase font-semibold">Link Two</a>
+          <a href="/" class="link uppercase font-semibold">Link Three</a>
+        </div>
+      
+        <div class="content flex justify-center">
+          <div class="sidebar left w-[100px] bg-purple-400"></div>
+          <div id="gradient" class="grad h-[85vh] w-full flex justify-center items-center">
+            <button type="button" class="button uppercase bg-purple-300 py-7 px-9 rounded-3xl font-bold text-5xl shadow-purple hover:bg-purple-100 duration-500 ease-in">
+              Reverse
+            </button>
+          </div>
+          <div class="sidebar right w-[100px] bg-purple-400"></div>
+        </div>
+      
+        <div class="bottom bg-purple-800 text-white h-[90px]"></div>
+      </section>
+</body>
+</html>
